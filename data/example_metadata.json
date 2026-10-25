@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "train_rows": 265,
+  "validation_rows": 88,
+  "test_rows": 89,
+  "target_rule": "1 if progression >= training target median",
+  "target_cutoff": 141.0,
+  "age_cutoff_scaled": 0.005383060374248237,
+  "sex_codes_scaled": [
+    -0.044641636506989144,
+    0.05068011873981862
+  ],
+  "predictor_columns": [
+    "bmi",
+    "bp",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "source": "sklearn.datasets.load_diabetes"
+}

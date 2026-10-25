@@ -1,0 +1,780 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-25T11:48:29.890887+00:00",
+  "rows": 89,
+  "config": {
+    "target": "y_true",
+    "prediction": "y_pred",
+    "sensitive": [
+      "sex_code",
+      "age_band"
+    ],
+    "score": "y_score",
+    "min_group_size": 30,
+    "medium_gap": 0.1,
+    "high_gap": 0.2,
+    "calibration_bins": 10
+  },
+  "assessments": [
+    {
+      "attributes": [
+        "sex_code"
+      ],
+      "groups": [
+        {
+          "group": "[\"encoded_1\"]",
+          "accuracy": 0.7659574468085106,
+          "precision": 0.782608695652174,
+          "recall": 0.75,
+          "f1": 0.7659574468085106,
+          "selection_rate": 0.48936170212765956,
+          "true_positive_rate": 0.75,
+          "false_positive_rate": 0.21739130434782608,
+          "count": 47.0,
+          "positives": 24.0,
+          "negatives": 23.0,
+          "ece": 0.13099886727681395,
+          "brier_score": 0.14118610619721145
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "accuracy": 0.7142857142857143,
+          "precision": 0.72,
+          "recall": 0.782608695652174,
+          "f1": 0.75,
+          "selection_rate": 0.5952380952380952,
+          "true_positive_rate": 0.782608695652174,
+          "false_positive_rate": 0.3684210526315789,
+          "count": 42.0,
+          "positives": 23.0,
+          "negatives": 19.0,
+          "ece": 0.18930139979331756,
+          "brier_score": 0.16604769673638234
+        }
+      ],
+      "disparities": {
+        "demographic_parity_difference": 0.10587639311043567,
+        "demographic_parity_ratio": 0.8221276595744681,
+        "equal_opportunity_difference": 0.03260869565217395,
+        "equalized_odds_difference": 0.15102974828375285,
+        "accuracy_gap": 0.05167173252279633,
+        "precision_gap": 0.06260869565217397,
+        "recall_gap": 0.03260869565217395,
+        "f1_gap": 0.015957446808510634,
+        "ece_gap": 0.05830253251650361
+      },
+      "calibration": [
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 0,
+          "count": 6,
+          "mean_score": 0.07661616831384395,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 1,
+          "count": 9,
+          "mean_score": 0.1481323798370367,
+          "observed_rate": 0.1111111111111111
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 2,
+          "count": 4,
+          "mean_score": 0.2580883695485112,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 3,
+          "count": 2,
+          "mean_score": 0.3303352103657359,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 4,
+          "count": 3,
+          "mean_score": 0.44580512491842944,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 5,
+          "count": 5,
+          "mean_score": 0.5685191058906269,
+          "observed_rate": 0.6
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 6,
+          "count": 6,
+          "mean_score": 0.6432204710695525,
+          "observed_rate": 0.6666666666666666
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 7,
+          "count": 5,
+          "mean_score": 0.745329778095262,
+          "observed_rate": 0.8
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 8,
+          "count": 4,
+          "mean_score": 0.8405709553938568,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\"]",
+          "bin": 9,
+          "count": 3,
+          "mean_score": 0.9597860937304121,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 1,
+          "count": 2,
+          "mean_score": 0.14220413398494575,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 2,
+          "count": 2,
+          "mean_score": 0.2812830019468906,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 3,
+          "count": 8,
+          "mean_score": 0.3427879744768827,
+          "observed_rate": 0.125
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 4,
+          "count": 5,
+          "mean_score": 0.4637128272804437,
+          "observed_rate": 0.8
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 5,
+          "count": 5,
+          "mean_score": 0.5515094453646257,
+          "observed_rate": 0.6
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 6,
+          "count": 6,
+          "mean_score": 0.6792314373384434,
+          "observed_rate": 0.3333333333333333
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 7,
+          "count": 6,
+          "mean_score": 0.7650457005209125,
+          "observed_rate": 0.8333333333333334
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 8,
+          "count": 5,
+          "mean_score": 0.8484387864774703,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\"]",
+          "bin": 9,
+          "count": 3,
+          "mean_score": 0.9351428005506278,
+          "observed_rate": 1.0
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "attributes": [
+        "age_band"
+      ],
+      "groups": [
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "accuracy": 0.6521739130434783,
+          "precision": 0.6785714285714286,
+          "recall": 0.7307692307692307,
+          "f1": 0.7037037037037037,
+          "selection_rate": 0.6086956521739131,
+          "true_positive_rate": 0.7307692307692307,
+          "false_positive_rate": 0.45,
+          "count": 46.0,
+          "positives": 26.0,
+          "negatives": 20.0,
+          "ece": 0.19266632076869974,
+          "brier_score": 0.18171744101146747
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "accuracy": 0.8372093023255814,
+          "precision": 0.85,
+          "recall": 0.8095238095238095,
+          "f1": 0.8292682926829268,
+          "selection_rate": 0.46511627906976744,
+          "true_positive_rate": 0.8095238095238095,
+          "false_positive_rate": 0.13636363636363635,
+          "count": 43.0,
+          "positives": 21.0,
+          "negatives": 22.0,
+          "ece": 0.17167098394668523,
+          "brier_score": 0.12211041785277892
+        }
+      ],
+      "disparities": {
+        "demographic_parity_difference": 0.14357937310414565,
+        "demographic_parity_ratio": 0.7641196013289036,
+        "equal_opportunity_difference": 0.07875457875457881,
+        "equalized_odds_difference": 0.31363636363636366,
+        "accuracy_gap": 0.18503538928210317,
+        "precision_gap": 0.17142857142857137,
+        "recall_gap": 0.07875457875457881,
+        "f1_gap": 0.12556458897922307,
+        "ece_gap": 0.020995336822014515
+      },
+      "calibration": [
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 0,
+          "count": 1,
+          "mean_score": 0.0661613135090828,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 1,
+          "count": 4,
+          "mean_score": 0.15212934712817833,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 2,
+          "count": 2,
+          "mean_score": 0.2916651697713541,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 3,
+          "count": 6,
+          "mean_score": 0.3459764893841328,
+          "observed_rate": 0.5
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 4,
+          "count": 5,
+          "mean_score": 0.4492707795142693,
+          "observed_rate": 0.8
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 5,
+          "count": 4,
+          "mean_score": 0.5690915791678546,
+          "observed_rate": 0.5
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 6,
+          "count": 8,
+          "mean_score": 0.6603324473501996,
+          "observed_rate": 0.25
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 7,
+          "count": 5,
+          "mean_score": 0.7575941064074916,
+          "observed_rate": 0.8
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 8,
+          "count": 6,
+          "mean_score": 0.8487194927817562,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"at_or_above_training_median\"]",
+          "bin": 9,
+          "count": 5,
+          "mean_score": 0.9503767718146385,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 0,
+          "count": 5,
+          "mean_score": 0.07870713927479618,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 1,
+          "count": 7,
+          "mean_score": 0.14415461399864404,
+          "observed_rate": 0.14285714285714285
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 2,
+          "count": 4,
+          "mean_score": 0.25289728563627945,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 3,
+          "count": 4,
+          "mean_score": 0.33177882006043424,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 4,
+          "count": 3,
+          "mean_score": 0.46987520452872017,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 5,
+          "count": 6,
+          "mean_score": 0.5539627399341406,
+          "observed_rate": 0.6666666666666666
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 6,
+          "count": 4,
+          "mean_score": 0.6630129679115945,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 7,
+          "count": 6,
+          "mean_score": 0.7548254269273879,
+          "observed_rate": 0.8333333333333334
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 8,
+          "count": 3,
+          "mean_score": 0.8373869324240806,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"below_training_median\"]",
+          "bin": 9,
+          "count": 1,
+          "mean_score": 0.9329028237699276,
+          "observed_rate": 1.0
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "attributes": [
+        "sex_code",
+        "age_band"
+      ],
+      "groups": [
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "accuracy": 0.6666666666666666,
+          "precision": 0.7142857142857143,
+          "recall": 0.7692307692307693,
+          "f1": 0.7407407407407407,
+          "selection_rate": 0.6666666666666666,
+          "true_positive_rate": 0.7692307692307693,
+          "false_positive_rate": 0.5,
+          "count": 21.0,
+          "positives": 13.0,
+          "negatives": 8.0,
+          "ece": 0.19376411398478885,
+          "brier_score": 0.19127010641736497
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "accuracy": 0.8461538461538461,
+          "precision": 0.8888888888888888,
+          "recall": 0.7272727272727273,
+          "f1": 0.8,
+          "selection_rate": 0.34615384615384615,
+          "true_positive_rate": 0.7272727272727273,
+          "false_positive_rate": 0.06666666666666667,
+          "count": 26.0,
+          "positives": 11.0,
+          "negatives": 15.0,
+          "ece": 0.14972748785000162,
+          "brier_score": 0.10073364448093361
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "accuracy": 0.64,
+          "precision": 0.6428571428571429,
+          "recall": 0.6923076923076923,
+          "f1": 0.6666666666666666,
+          "selection_rate": 0.56,
+          "true_positive_rate": 0.6923076923076923,
+          "false_positive_rate": 0.4166666666666667,
+          "count": 25.0,
+          "positives": 13.0,
+          "negatives": 12.0,
+          "ece": 0.2672420859509353,
+          "brier_score": 0.17369320207051359
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "accuracy": 0.8235294117647058,
+          "precision": 0.8181818181818182,
+          "recall": 0.9,
+          "f1": 0.8571428571428571,
+          "selection_rate": 0.6470588235294118,
+          "true_positive_rate": 0.9,
+          "false_positive_rate": 0.2857142857142857,
+          "count": 17.0,
+          "positives": 10.0,
+          "negatives": 7.0,
+          "ece": 0.22563569309628442,
+          "brier_score": 0.15480430653913052
+        }
+      ],
+      "disparities": {
+        "demographic_parity_difference": 0.3205128205128205,
+        "demographic_parity_ratio": 0.5192307692307693,
+        "equal_opportunity_difference": 0.20769230769230773,
+        "equalized_odds_difference": 0.43333333333333335,
+        "accuracy_gap": 0.20615384615384613,
+        "precision_gap": 0.24603174603174593,
+        "recall_gap": 0.20769230769230773,
+        "f1_gap": 0.19047619047619047,
+        "ece_gap": 0.11751459810093368
+      },
+      "calibration": [
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 0,
+          "count": 1,
+          "mean_score": 0.0661613135090828,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 1,
+          "count": 2,
+          "mean_score": 0.1620545602714109,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 2,
+          "count": 1,
+          "mean_score": 0.2937293330892022,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 3,
+          "count": 2,
+          "mean_score": 0.3303352103657359,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 4,
+          "count": 1,
+          "mean_score": 0.4006443943685934,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 5,
+          "count": 3,
+          "mean_score": 0.5650883476961979,
+          "observed_rate": 0.6666666666666666
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 6,
+          "count": 4,
+          "mean_score": 0.6328440626146219,
+          "observed_rate": 0.5
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 7,
+          "count": 3,
+          "mean_score": 0.7412668070207159,
+          "observed_rate": 0.6666666666666666
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 8,
+          "count": 2,
+          "mean_score": 0.8335473646856042,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"at_or_above_training_median\"]",
+          "bin": 9,
+          "count": 2,
+          "mean_score": 0.9732277287106543,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 0,
+          "count": 5,
+          "mean_score": 0.07870713927479618,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 1,
+          "count": 7,
+          "mean_score": 0.14415461399864404,
+          "observed_rate": 0.14285714285714285
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 2,
+          "count": 3,
+          "mean_score": 0.2462080483682809,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 4,
+          "count": 2,
+          "mean_score": 0.4683854901933475,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 5,
+          "count": 2,
+          "mean_score": 0.5736652431822706,
+          "observed_rate": 0.5
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 6,
+          "count": 2,
+          "mean_score": 0.6639732879794136,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 7,
+          "count": 2,
+          "mean_score": 0.7514242347070811,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 8,
+          "count": 2,
+          "mean_score": 0.8475945461021096,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_1\", \"below_training_median\"]",
+          "bin": 9,
+          "count": 1,
+          "mean_score": 0.9329028237699276,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 1,
+          "count": 2,
+          "mean_score": 0.14220413398494575,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 2,
+          "count": 1,
+          "mean_score": 0.289601006453506,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 3,
+          "count": 4,
+          "mean_score": 0.35379712889333115,
+          "observed_rate": 0.25
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 4,
+          "count": 4,
+          "mean_score": 0.46142737580068827,
+          "observed_rate": 0.75
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 5,
+          "count": 1,
+          "mean_score": 0.5811012735828249,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 6,
+          "count": 4,
+          "mean_score": 0.6878208320857774,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 7,
+          "count": 2,
+          "mean_score": 0.7820850554876551,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 8,
+          "count": 4,
+          "mean_score": 0.8563055568298322,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"at_or_above_training_median\"]",
+          "bin": 9,
+          "count": 3,
+          "mean_score": 0.9351428005506278,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 2,
+          "count": 1,
+          "mean_score": 0.2729649974402752,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 3,
+          "count": 4,
+          "mean_score": 0.33177882006043424,
+          "observed_rate": 0.0
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 4,
+          "count": 1,
+          "mean_score": 0.4728546331994654,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 5,
+          "count": 4,
+          "mean_score": 0.5441114883100757,
+          "observed_rate": 0.75
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 6,
+          "count": 2,
+          "mean_score": 0.6620526478437753,
+          "observed_rate": 1.0
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 7,
+          "count": 4,
+          "mean_score": 0.7565260230375411,
+          "observed_rate": 0.75
+        },
+        {
+          "group": "[\"encoded_2\", \"below_training_median\"]",
+          "bin": 8,
+          "count": 1,
+          "mean_score": 0.8169717050680227,
+          "observed_rate": 1.0
+        }
+      ],
+      "warnings": [
+        "[\"encoded_1\", \"at_or_above_training_median\"]: only 21 records; estimates may be unstable.",
+        "[\"encoded_1\", \"below_training_median\"]: only 26 records; estimates may be unstable.",
+        "[\"encoded_2\", \"at_or_above_training_median\"]: only 25 records; estimates may be unstable.",
+        "[\"encoded_2\", \"below_training_median\"]: only 17 records; estimates may be unstable."
+      ]
+    }
+  ],
+  "risk": {
+    "level": "High",
+    "worst_gap": 0.43333333333333335,
+    "incomplete": false,
+    "sparse": true,
+    "findings": [
+      {
+        "attributes": [
+          "sex_code",
+          "age_band"
+        ],
+        "metric": "equalized_odds_difference",
+        "gap": 0.43333333333333335
+      },
+      {
+        "attributes": [
+          "sex_code",
+          "age_band"
+        ],
+        "metric": "demographic_parity_difference",
+        "gap": 0.3205128205128205
+      },
+      {
+        "attributes": [
+          "age_band"
+        ],
+        "metric": "equalized_odds_difference",
+        "gap": 0.31363636363636366
+      },
+      {
+        "attributes": [
+          "sex_code",
+          "age_band"
+        ],
+        "metric": "precision_gap",
+        "gap": 0.24603174603174593
+      },
+      {
+        "attributes": [
+          "sex_code",
+          "age_band"
+        ],
+        "metric": "equal_opportunity_difference",
+        "gap": 0.20769230769230773
+      }
+    ],
+    "recommendations": [
+      "Review group sample sizes, label quality, and how outcome 1 relates to benefit or harm.",
+      "Investigate the largest gaps with domain stakeholders before selecting a fairness objective.",
+      "Compare threshold candidates on validation data, then audit once on an untouched test set.",
+      "Consider better data coverage, reweighting, or Fairlearn mitigation; compare utility trade-offs."
+    ]
+  }
+}
